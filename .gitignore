@@ -11,7 +11,8 @@
 /tmp/
 
 ## Mailbosa
-/usr/local/etc/settings.yml
+usr/local/etc/mailbosa/*.yml
+
 
 ## Documentation cache and generated files:
 /.yardoc/
