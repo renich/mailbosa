@@ -1,0 +1,26 @@
+# mailbosa main configuration file
+---
+# credentials
+:smtp:
+    :url: smtp.gmail.com
+    :domain: gmail.com
+    :username: me@gmail.com
+    :password: S0me.R3all7.6o0d.P4svv0rd
+    :port: 587
+    :ssl: 1
+
+# settings
+:email:
+    :list: /var/lib/mailbosa/emails.json
+    :list_sent: /var/lib/mailbosa/sent.json
+    :message: /var/lib/mailbosa/message.txt
+    :amount: 10
+    :timeframe: 3600
+
+# general
+:general:
+    :testing: 1
+    :log: 
+        :file: /var/log/mailbosa.log
+        :progname: mailbosa
+        :level: 0 # debug = 0, info = 1, warn = 2, error = 3, fatal = 4, unknown = 5
