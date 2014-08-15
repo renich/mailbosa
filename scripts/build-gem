@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+path=$( readlink -f $( dirname $0 )/.. )
+
+cd $path
+
+gem build mailbosa.gemspec
+
+mv *.gem builds/mailbosa-latest.gem
+
+exit 0
