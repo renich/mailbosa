@@ -1,4 +1,6 @@
 ## General
+*.gem
+! builds/*.gem
 .*.swp
 *.rbc
 /.config
