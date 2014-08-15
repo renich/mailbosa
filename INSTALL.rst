@@ -13,7 +13,14 @@ Start
 
 Once you have mailbosa installed, you just need to:
 
-# create the ~/.mailbosa directory and put the email list in ~/.mailbosa/emails.json; in the following form:
+# create the ~/.mailbosa directory 
+
+.. code-block:: bash
+
+    mkdir -m 700 ~/.mailbosa
+
+
+# put the email list in ~/.mailbosa/emails.json; in the following form:
 
 .. code-block:: json
 
@@ -29,9 +36,20 @@ Once you have mailbosa installed, you just need to:
         ]
     }
 
+
+# create the email in ~/.mailbosa/message.txt; in the following form:
+
+.. code-block:: txt
+
+    Subject: test message
+    
+    Hello, this is a test email from me.
+
+
 # edit configuration
 First, copy config/settings.yml.example (from github) to ~/.config/mailbosa/settings.yml
 Now, You need to add your gmail credentials to ~/.config/mailbosa/settings.yml
+
 
 # start mailbosa
 
