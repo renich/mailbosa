@@ -1,5 +1,5 @@
 ## General
-*.gem
+.*.swp
 *.rbc
 /.config
 /coverage/
