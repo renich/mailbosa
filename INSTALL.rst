@@ -5,7 +5,8 @@ To install, the easy way is to just:
 
 .. code-block:: bash
 
-    gem install --source https://github.com/renich/mailbosa/tree/gem mailbosa
+    curl -O https://raw.githubusercontent.com/renich/mailbosa/master/builds/mailbosa-latest.gem
+    gem install mailbosa-latest.gem
 
 
 Start
