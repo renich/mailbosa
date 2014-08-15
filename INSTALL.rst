@@ -5,8 +5,7 @@ To install, the easy way is to just:
 
 .. code-block:: bash
 
-    # execute make install as root
-    su -c 'make install'
+    gem install --source https://github.com/renich/mailbosa.git mailbosa
 
 
 Start
@@ -14,7 +13,7 @@ Start
 
 Once you have mailbosa installed, you just need to:
 
-# put the email list in /var/lib/mailbosa/emails.json; in the following form:
+# put the email list in ~/.mailbosa/emails.json; in the following form:
 
 .. code-block:: json
 
@@ -31,8 +30,8 @@ Once you have mailbosa installed, you just need to:
     }
 
 # edit configuration
-First, copy /usr/local/etc/mailbosa/settings.yml.example into /usr/local/etc/mailbosa/settings.yml
-Now, You need to add your gmail credentials to /usr/local/etc/mailbosa/settings.yml
+First, copy ~/.config/mailbosa/mailbosa/settings.yml.example ~/.config/mailbosa/mailbosa/settings.yml
+Now, You need to add your gmail credentials to ~/.config/mailbosa/settings.yml
 
 # start mailbosa
 
@@ -48,4 +47,4 @@ You can always check your status by using:
 
 .. code-block:: bash
 
-    tailf /var/log/mailbosa/main.log
+    tailf ~/.mailbosa/main.log

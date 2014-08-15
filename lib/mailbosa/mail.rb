@@ -1,4 +1,5 @@
 require 'fallen'
+require 'oj' 
 
 module Mailbosa extend Fallen
     class Mail

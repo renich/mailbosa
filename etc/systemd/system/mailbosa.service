@@ -1,0 +1,13 @@
+[Unit]
+Description=Slow pace mailing client
+Requires=network.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/mailbosa
+User=mailbosa
+Group=mailbosa
+UMask=007
+
+[Install]
+WantedBy=multi-user.target
