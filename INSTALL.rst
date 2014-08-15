@@ -13,11 +13,23 @@ Start
 
 Once you have mailbosa installed, you just need to:
 
-# create the ~/.mailbosa directory 
+# create the ~/.mailbosa directories 
 
 .. code-block:: bash
 
+    mkdir -m 700 ~/.config/mailbosa
     mkdir -m 700 ~/.mailbosa
+
+
+# edit configuration
+
+First, copy config/settings.yml.example (from github) to ~/.config/mailbosa/settings.yml. 
+
+.. code-block:: bash
+
+    curl https://raw.githubusercontent.com/renich/mailbosa/gem/config/settings.yml.example > ~/.config/mailbosa/settings.yml
+
+Now, You need to add your gmail credentials to ~/.config/mailbosa/settings.yml
 
 
 # put the email list in ~/.mailbosa/emails.json; in the following form:
@@ -43,11 +55,6 @@ Once you have mailbosa installed, you just need to:
     
     Hello, this is a test email from me.
 
-
-# edit configuration
-
-First, copy config/settings.yml.example (from github) to ~/.config/mailbosa/settings.yml. Now, You need to add your gmail 
-credentials to ~/.config/mailbosa/settings.yml
 
 
 # start mailbosa
