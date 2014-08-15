@@ -5,7 +5,7 @@ To install, the easy way is to just:
 
 .. code-block:: bash
 
-    gem install --source https://github.com/renich/mailbosa.git mailbosa
+    gem install --source https://github.com/renich/mailbosa/tree/gem mailbosa
 
 
 Start
@@ -13,7 +13,7 @@ Start
 
 Once you have mailbosa installed, you just need to:
 
-# put the email list in ~/.mailbosa/emails.json; in the following form:
+# create the ~/.mailbosa directory and put the email list in ~/.mailbosa/emails.json; in the following form:
 
 .. code-block:: json
 
@@ -30,7 +30,7 @@ Once you have mailbosa installed, you just need to:
     }
 
 # edit configuration
-First, copy ~/.config/mailbosa/mailbosa/settings.yml.example ~/.config/mailbosa/mailbosa/settings.yml
+First, copy config/settings.yml.example (from github) to ~/.config/mailbosa/settings.yml
 Now, You need to add your gmail credentials to ~/.config/mailbosa/settings.yml
 
 # start mailbosa
