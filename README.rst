@@ -30,13 +30,6 @@ Error checking:
 systemd:
     I want this app to be systemd friendly. 
 
-gem:
-    I'd love to meke it a gem.
-
-data locations:
-    I want to make it smart so it uses ~/bin, ~/.config/mailbosa, ~/.local/share/mailbosa, etc; when ran by a normal user. 
-    And /usr/local/bin, /usr/local/share/mailbosa, /var/lib/mailbosa, etc; when ran by root.
-
 GUI:
     I'd like to use GTK+ 3 for a GUI in the future. I am considering: https://github.com/mvz/ruby-gir-ffi
 
