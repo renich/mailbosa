@@ -5,22 +5,9 @@ To install, the easy way is to just:
 
 .. code-block:: bash
 
-    # become root
-    su -
+    # execute make install as root
+    su -c 'make install'
 
-    # clone the repo
-    git clone https://github.com/renich/mailbosa.git
-
-    # go into the directory
-    cd mailbosa
-
-    # put the files in place
-    GIT_WORK_TREE=/ git checkout -f
-
-    # remove what is not needed
-    for f in Gemfile .gitignore INSTALL.rst LICENSE README.rst; do
-        rm -f $f
-    done
 
 Start
 -----
@@ -43,6 +30,10 @@ Once you have mailbosa installed, you just need to:
         ]
     }
 
+# edit configuration
+First, copy /usr/local/etc/mailbosa/settings.yml.example into /usr/local/etc/mailbosa/settings.yml
+Now, You need to add your gmail credentials to /usr/local/etc/mailbosa/settings.yml
+
 # start mailbosa
 
 .. code-block:: bash
@@ -57,4 +48,4 @@ You can always check your status by using:
 
 .. code-block:: bash
 
-    tailf /var/log/mailbosa.log
+    tailf /var/log/mailbosa/main.log
