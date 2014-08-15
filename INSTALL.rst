@@ -19,14 +19,14 @@ Once you have mailbosa installed, you just need to:
 .. code-block:: json
 
     {
-        'category1': [
-            'someone@example.tld',
-            'someother@example.tld'
+        "category1": [
+            "someone@example.tld",
+            "someother@example.tld"
         ],
 
-        'category2': [
-            'other@someother.tld',
-            'another@someother.tld'
+        "category2": [
+            "other@someother.tld",
+            "another@someother.tld"
         ]
     }
 
