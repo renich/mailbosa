@@ -1,3 +1,6 @@
+require 'oj'
+require 'logger'
+
 module Mailbosa
     # get settings
     settings = Settings.new
@@ -9,16 +12,16 @@ module Mailbosa
     Account = settings[:smtp][:username]
     Password = settings[:smtp][:password]
     Delay = settings[:email][:timeframe] / settings[:email][:amount]
-    Recipients = settings[:email][:list]
-    Sent = settings[:email][:list_sent]
-    Message = settings[:email][:message]
+    Recipients = File.expand_path( settings[:email][:list] )
+    Sent = File.expand_path( settings[:email][:list_sent] )
+    Message = File.expand_path( settings[:email][:message] )
     Test = settings[:general][:testing]
 
     # configure Oj
     Oj.default_options = { indent: 4 }
 
     # logger
-    @logger = Logger.new( settings[:general][:log][:file], 5, 1024 * 1024 * 1024 * 10 )
+    @logger = Logger.new( File.expand_path( settings[:general][:log][:file] ), 5, 1024 * 1024 * 1024 * 10 )
     @logger.progname = settings[:general][:log][:progname]
     @logger.level =  settings[:general][:log][:level]
     @logger.info( 'started!' )
