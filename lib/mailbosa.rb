@@ -1,11 +1,6 @@
-#!/usr/bin/env ruby
-
-require 'bundler/setup'
-Bundler.require
-
-require_relative '../share/mailbosa/Settings'
-require_relative '../share/mailbosa/Bootstrap'
-require_relative '../share/mailbosa/Mail'
+require 'mailbosa/settings'
+require 'mailbosa/bootstrap'
+require 'mailbosa/mail'
 
 module Mailbosa extend Fallen
     def self.run
@@ -73,5 +68,3 @@ module Mailbosa extend Fallen
         end
     end
 end
-
-Mailbosa.start!

@@ -11,16 +11,16 @@
 
 # settings
 :email:
-    :list: /var/lib/mailbosa/emails.json
-    :list_sent: /var/lib/mailbosa/sent.json
-    :message: /var/lib/mailbosa/message.txt
-    :amount: 10
-    :timeframe: 3600
+    :list: ~/.mailbosa/emails.json
+    :list_sent: ~/.mailbosa/sent.json
+    :message: ~/.mailbosa/message.txt
+    :amount: 2
+    :timeframe: 10
 
 # general
 :general:
     :testing: 1
     :log: 
-        :file: /var/log/mailbosa/main.log
+        :file: ~/.mailbosa/main.log
         :progname: mailbosa
         :level: 0 # debug = 0, info = 1, warn = 2, error = 3, fatal = 4, unknown = 5
