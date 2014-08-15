@@ -41,7 +41,7 @@ GUI:
     I'd like to use GTK+ 3 for a GUI in the future. I am considering: https://github.com/mvz/ruby-gir-ffi
 
 
-Non-TODO
+TODO!
 --------
 Things I don't, currently, want to implement:
 
