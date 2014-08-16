@@ -1,13 +1,18 @@
 Install
 =======
 
-To install, the easy way is to just:
+To install, there are a few methods:
 
 .. code-block:: bash
 
+    # method 1 (binary install)
     curl -O https://raw.githubusercontent.com/renich/mailbosa/master/builds/mailbosa-latest.gem
     gem install mailbosa-latest.gem
 
+    # method 2 (roll your own)
+    git clone https://github.com/renich/mailbosa.git
+    cd mailbosa
+    make all
 
 Start
 -----
