@@ -1,5 +1,5 @@
-require 'oj'
 require 'logger'
+require 'oj'
 
 module Mailbosa
     # get settings
