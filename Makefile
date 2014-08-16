@@ -1,4 +1,4 @@
-build:
+build: clean
 	scripts/build-gem
 
 install:
