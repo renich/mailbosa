@@ -9,10 +9,11 @@ module Mailbosa extend Fallen
         message = Mailbosa::Mail::message_file( Message )
 
         while running?
-            # laod sent recipients
+            # load recipients
             @logger.debug( 'loading email list.' )
             emails = Mailbosa::Mail::get_emails( Recipients )
 
+            # laod sent 
             @logger.debug( 'loading sent email list.' )
             sent = Mailbosa::Mail::get_emails( Sent )
 
@@ -36,7 +37,6 @@ module Mailbosa extend Fallen
                 exit( 0 )
             end
 
-
             # get an email
             @logger.debug( 'picking an email from the pending list.' )
             group = emails.shift
@@ -45,8 +45,8 @@ module Mailbosa extend Fallen
             # send next
             @logger.info( "Sending email to: #{to_send}" )
             if Test == 0
-                smtp = Mailbosa::Mail.new if Test == 0
-                smtp.send if Test == 0
+                smtp = Mailbosa::Mail.new
+                smtp.send
             end
 
             # mark it as sent
