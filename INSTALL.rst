@@ -33,7 +33,7 @@ First, copy config/settings.yml.example (from github) to ~/.config/mailbosa/sett
 
 .. code-block:: bash
 
-    curl https://raw.githubusercontent.com/renich/mailbosa/gem/config/settings.yml.example > ~/.config/mailbosa/settings.yml
+    curl https://raw.githubusercontent.com/renich/mailbosa/master/config/settings.yml.example > ~/.config/mailbosa/settings.yml
 
 Now, You need to add your gmail credentials to ~/.config/mailbosa/settings.yml. Also, when you're certain everything is fine, set testing to 0.
 
