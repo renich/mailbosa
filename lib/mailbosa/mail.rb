@@ -10,9 +10,9 @@ module Mailbosa extend Fallen
             @smtp.enable_starttls unless SSL == 0
         end
 
-        def send
+        def send( message, from, to )
             @smtp.start( Domain, Account, Password, :login ) do
-                @smtp.send_message( Message, Account, Account )
+                @smtp.send_message( message, from, to )
             end
         end
 

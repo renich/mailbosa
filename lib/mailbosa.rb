@@ -6,7 +6,7 @@ module Mailbosa extend Fallen
     def self.run
         # load email list
         @logger.debug( 'loading message to send.' )
-        message = Mailbosa::Mail::message_file( Message )
+        message = "From: #{Account}\n" + Mailbosa::Mail::message_file( Message )
 
         while running?
             # load recipients
@@ -41,12 +41,13 @@ module Mailbosa extend Fallen
             @logger.debug( 'picking an email from the pending list.' )
             group = emails.shift
             to_send = group[1].shift
+            message = "To: #{to_send}\n" + message
 
             # send next
             @logger.info( "Sending email to: #{to_send}" )
             if Test == 0
                 smtp = Mailbosa::Mail.new
-                smtp.send
+                smtp.send( message, Account, to_send )
             end
 
             # mark it as sent
